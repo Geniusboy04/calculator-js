@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no /"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="/css/calculator.css" rel="stylesheet"/>
+    <link href="/js/calculator.js">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="container">
+        <div id="calculator">
+            <div class="result">
+                <input type="text" id="txt" autocomplete="off">
+            </div>
+            <div id="keyboard">
+                <button id="clear" class="operator" onclick="document.getElementById('txt').value =''">C</button>
+                <button class="operator" onclick="pow()" id="prot" >x2</button>
+                <button class="operator" onclick="sqrt()">√</button>
+                <button class="operator" onclick="delet()">CE</button>
+                <button  class="number" onclick="document.getElementById('txt').value +='1'">1</button>
+                <button class="number" onclick="document.getElementById('txt').value +='2'">2</button>
+                <button class="number" onclick="document.getElementById('txt').value +='3'">3</button>
+                <button class="operator" id="mult" onclick="document.getElementById('txt').value +='*'">*</button>
+                <button class="number" onclick="document.getElementById('txt').value +='4'">4</button>
+                <button class="number" onclick="document.getElementById('txt').value +='5'">5</button>
+                <button class="number" onclick="document.getElementById('txt').value +='6'">6</button>
+                <button class="operator" id="sub" onclick="document.getElementById('txt').value +='-'">-</button>
+                <button class="number" onclick="document.getElementById('txt').value +='7'">7</button>
+                <button class="number" onclick="document.getElementById('txt').value +='8'">8</button>
+                <button class="number" onclick="document.getElementById('txt').value +='9'">9</button>
+                <button class="operator" id="divis" onclick="document.getElementById('txt').value +='/'" value="/">/</button>
+                <button class="operator" onclick="document.getElementById('txt').value +='.'">.</button>
+                <button class="number" onclick="document.getElementById('txt').value +='0'">0</button>
+                <button class="operator" onclick="document.getElementById('txt').value = eval(document.getElementById('txt').value)">=</button>
+                <button class="operator"  onclick="document.getElementById('txt').value +='+'" value="+">+</button>
+            </div>
+        </div>
+    </div>
+<script src="/js/calculator.js"></script>    
+</body>
+</html>
